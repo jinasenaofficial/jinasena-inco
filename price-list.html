@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products Price List</title>
+
+<style>
+
+/* Corbert Font */
+@font-face {
+    font-family: 'Corbert';
+    src: url('Corbert-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'Corbert', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Header */
+header {
+    background-color: #002f87;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+header img {
+    height: 80px;
+}
+
+.header-center {
+    text-align: center;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header-center h2 {
+    margin: 5px 0 0 0;
+    font-size: 20px;
+    color: #a18528;
+}
+
+/* Search Section */
+#searchSection {
+    text-align: center;
+    margin: 80px 20px;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 18px;
+    font-size: 18px;
+    border: 2px solid #002f87;
+    border-radius: 6px;
+}
+
+#searchBtn {
+    padding: 18px 25px;
+    font-size: 18px;
+    background-color: #a18528;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Result Table (Hidden Initially) */
+#resultTable {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    display: none;
+}
+
+#resultTable th, #resultTable td {
+    border: 2px solid #002f87;
+    padding: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+
+#resultTable th {
+    background-color: #002f87;
+    color: white;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="inco-logo.png" alt="INCO Logo">
+
+    <div class="header-center">
+        <h1>JINASENA (PVT) LIMITED</h1>
+        <h2>INCO Price List</h2>
+    </div>
+
+    <img src="company-logo.png" alt="Company Logo">
+</header>
+
+<div id="searchSection">
+    <input type="text" id="searchInput" placeholder="Search by Model or Category">
+    <button id="searchBtn">Search</button>
+</div>
+
+<table id="resultTable">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Design Identification Code</th>
+            <th>Category</th>
+            <th>Prime Over (HP & AMP)</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+
+/* ===== ADD UP TO 200 ITEMS HERE ===== */
+
+const products = [
+    {model:"N110T/1N", design:"SD1CH25", category:"Domestic", prime:"0.75 HP / 4.1 AMP", price:"Rs. 59,800"},
+    {model:"N115T/1N", design:"SD1CH25", category:"Domestic", prime:"1 HP / 5.6 AMP", price:"Rs. 70,164"},
+    {model:"PPO110/1N", design:"SD1CH25", category:"Domestic", prime:"0.75 HP / 4.1 AMP", price:"Rs. 59,800"}
+    // Add up to 200 items here
+];
+
+/* ===== SEARCH FUNCTION ===== */
+
+document.getElementById("searchBtn").addEventListener("click", function() {
+
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const table = document.getElementById("resultTable");
+    const tbody = table.querySelector("tbody");
+    tbody.innerHTML = "";
+
+    const filtered = products.filter(p =>
+        p.model.toLowerCase().includes(input) ||
+        p.category.toLowerCase().includes(input)
+    );
+
+    if(filtered.length === 0){
+        tbody.innerHTML = "<tr><td colspan='5'>No matching items found</td></tr>";
+    } else {
+        filtered.forEach(p => {
+            const row = `
+                <tr>
+                    <td>${p.model}</td>
+                    <td>${p.design}</td>
+                    <td>${p.category}</td>
+                    <td>${p.prime}</td>
+                    <td class="price">${p.price}</td>
+                </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+    }
+
+    table.style.display = "table";
+});
+
+</script>
+
+</body>
+</html>
