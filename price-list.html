@@ -119,28 +119,174 @@ header img{
 <script>
 // ===== EMBEDDED DATA =====
 const products = [
-{Category:"Electric Pumps", Model:"N110T/1N", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"59,800"},
-{Category:"Electric Pumps", Model:"N115T/1N", Design:"SDICH25", Description:"-", Phase:"-", Prime:"1/5.6", Voltage:"-", Price:"70,164"},
-{Category:"Electric Pumps", Model:"PPO110/1N", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"59,800"},
-{Category:"Electric Pumps", Model:"PPO115/1N", Design:"SDICH25", Description:"-", Phase:"-", Prime:"1/5.6", Voltage:"-", Price:"63,669"},
-{Category:"Electric Pumps", Model:"10CJ 0205", Design:"SBICH25", Description:"-", Phase:"-", Prime:"0.5/2.9", Voltage:"-", Price:"40,710"},
-{Category:"Electric Pumps", Model:"10CJ 0245", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/3.8", Voltage:"-", Price:"56,188"},
-{Category:"Electric Pumps", Model:"10CJ 0305", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"59,195"},
-{Category:"Electric Pumps", Model:"10CJ 0345", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1/6.1", Voltage:"-", Price:"63,553"},
-{Category:"Electric Pumps", Model:"12CJ 0305", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"61,947"},
-{Category:"Electric Pumps", Model:"12CJ 0345", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1/6.1", Voltage:"-", Price:"66,130"},
-{Category:"Electric Pumps", Model:"12CJ 0405", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1.5/7.1", Voltage:"-", Price:"69,835"},
-{Category:"Electric Pumps", Model:"12CJ 0445", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1.5/7.9", Voltage:"-", Price:"72,665"},
-{Category:"Electric Pumps", Model:"12CJ 0505", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"2/9.2", Voltage:"-", Price:"77,580"},
-{Category:"Electric Pumps", Model:"12CJ 0545", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"2/10.1", Voltage:"-", Price:"81,573"},
-{Category:"Electric Pumps", Model:"12CJ 0605", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"2/11.2", Voltage:"-", Price:"85,600"},
-{Category:"Electric Pumps", Model:"12CJ 0645", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"2/12.1", Voltage:"-", Price:"89,950"},
-{Category:"Electric Pumps", Model:"12CJ 0705", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"3/13.5", Voltage:"-", Price:"94,370"},
-{Category:"Electric Pumps", Model:"12CJ 0745", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"3/14.4", Voltage:"-", Price:"98,450"},
-{Category:"Electric Pumps", Model:"12CJ 0805", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"3/15.2", Voltage:"-", Price:"102,650"},
-{Category:"Electric Pumps", Model:"12CJ 0845", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"3/16.1", Voltage:"-", Price:"107,300"},
-// ... continue pasting all 167 products from your Excel here in the same format ...
-];
+{Category:"Electric Pumps", Model:"N110T/1N", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"59,800"}
+{Category:"Electric Pumps", Model:"N115T/1N", Design:"SDICH25", Description:"-", Phase:"-", Prime:"1/5.6", Voltage:"-", Price:"70,164"}
+{Category:"Electric Pumps", Model:"PPO110/1N", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"59,800"}
+{Category:"Electric Pumps", Model:"PPO115/1N", Design:"SDICH25", Description:"-", Phase:"-", Prime:"1/5.6", Voltage:"-", Price:"63,669"}
+{Category:"Electric Pumps", Model:"10CJ 0205", Design:"SBICH25", Description:"-", Phase:"-", Prime:"0.5/2.9", Voltage:"-", Price:"40,710"}
+{Category:"Electric Pumps", Model:"10CJ 0245", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/3.8", Voltage:"-", Price:"56,188"}
+{Category:"Electric Pumps", Model:"10CJ 0305", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"59,195"}
+{Category:"Electric Pumps", Model:"EPC N110T/1N", Design:"SBICH25", Description:"-", Phase:"-", Prime:"0.75/3.8", Voltage:"-", Price:"77,544"}
+{Category:"Electric Pumps", Model:"EPC N115T/1N", Design:"SDICH25", Description:"-", Phase:"-", Prime:"1/5.6", Voltage:"-", Price:"87,886"}
+{Category:"Electric Pumps", Model:"EPC PPO110/1N", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"77,532"}
+{Category:"Electric Pumps", Model:"EPC PPO115/1N", Design:"SDICH25", Description:"-", Phase:"-", Prime:"1/5.6", Voltage:"-", Price:"81,402"}
+{Category:"Electric Pumps", Model:"EPC 10CJ 0205", Design:"SBICH25", Description:"-", Phase:"-", Prime:"0.5/2.9", Voltage:"-", Price:"56,316"}
+{Category:"Electric Pumps", Model:"EPC 10CJ 0245", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/3.8", Voltage:"-", Price:"70,635"}
+{Category:"Electric Pumps", Model:"EPC 10CJ 0305", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"73,697"}
+{Category:"Electric Pumps", Model:"PBS N110T/1N18", Design:"SB1CH25", Description:"-", Phase:"-", Prime:"0.75/3.8", Voltage:"-", Price:"114,645"}
+{Category:"Electric Pumps", Model:"PBS N115T/1N18-", Design:"SBICH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"124,997"}
+{Category:"Electric Pumps", Model:"PBS PPO110/1N18-", Design:"SD1CH25", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"114,645"}
+{Category:"Electric Pumps", Model:"PBS PPO115/1N-18", Design:"SBICH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"118,513"}
+{Category:"Electric Pumps", Model:"PBS HMS1041/-W18-", Design:"SU4CH25", Description:"-", Phase:"-", Prime:"1.5/6.71", Voltage:"-", Price:"226,560"}
+{Category:"Electric Pumps", Model:"PBS DM1501/-W18-", Design:"SU2CH25", Description:"-", Phase:"-", Prime:"3/13.1", Voltage:"-", Price:"241,900"}
+{Category:"Electric Pumps", Model:"DM1001/-W", Design:"SU2CH25", Description:"-", Phase:"-", Prime:"1.5/.7.4", Voltage:"-", Price:"169,920"}
+{Category:"Electric Pumps", Model:"HMS1041/-W", Design:"SU4CH25", Description:"-", Phase:"-", Prime:"1.5/6.71", Voltage:"-", Price:"184,080"}
+{Category:"Electric Pumps", Model:"M150/1", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"68,558"}
+{Category:"Electric Pumps", Model:"M150/1-2X2", Design:"SU2CH25", Description:"-", Phase:"-", Prime:"1/5.2", Voltage:"-", Price:"93,768"}
+{Category:"Electric Pumps", Model:"M1401/-W", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"1.5/6.71", Voltage:"-", Price:"131,544"}
+{Category:"Electric Pumps", Model:"H1401/-W", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"2/9.09", Voltage:"-", Price:"159,300"}
+{Category:"Electric Pumps", Model:"DM140/1-W", Design:"SU2CH25", Description:"-", Phase:"-", Prime:"3/13.1", Voltage:"-", Price:"194,700"}
+{Category:"Electric Pumps", Model:"L2001/-W", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"1.5/6.71", Voltage:"-", Price:"141,600"}
+{Category:"Electric Pumps", Model:"M2001/-W", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"2/9.09", Voltage:"-", Price:"162,840"}
+{Category:"Electric Pumps", Model:"M2001/DV-", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"2/9.09", Voltage:"-", Price:"79,999"}
+{Category:"Electric Pumps", Model:"H200/1-W", Design:"SU1CH25", Description:"-", Phase:"-", Prime:"3/13.1", Voltage:"-", Price:"194,911"}
+{Category:"Electric Pumps", Model:"200/1-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"3/4.24", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"L3001/-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"3/4.24", Voltage:"-", Price:"194,911"}
+{Category:"Electric Pumps", Model:"HMS104/3-W", Design:"IU4CH25", Description:"-", Phase:"-", Prime:"1.5/2.48", Voltage:"-", Price:"237,180"}
+{Category:"Electric Pumps", Model:"M140/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"1.5/2.48", Voltage:"-", Price:"141,600"}
+{Category:"Electric Pumps", Model:"H140/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"2/3.5", Voltage:"-", Price:"169,920"}
+{Category:"Electric Pumps", Model:"DM1403/-W", Design:"TU2CH25", Description:"-", Phase:"-", Prime:"3/4.24", Voltage:"-", Price:"219,480"}
+{Category:"Electric Pumps", Model:"200/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"3/4.24", Voltage:"-", Price:"198,240"}
+{Category:"Electric Pumps", Model:"L200/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"1.5/2.48", Voltage:"-", Price:"152,220"}
+{Category:"Electric Pumps", Model:"M200/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"2026-02-03", Voltage:"-", Price:"173,460"}
+{Category:"Electric Pumps", Model:"H200/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"3/4.24", Voltage:"-", Price:"198,640"}
+{Category:"Electric Pumps", Model:"DM2003/-W", Design:"TU2CH25", Description:"-", Phase:"-", Prime:"5.5/7.52", Voltage:"-", Price:"346,920"}
+{Category:"Electric Pumps", Model:"DH200/3-W", Design:"TU2CH25", Description:"-", Phase:"-", Prime:"7.5/10.2", Voltage:"-", Price:"442,500"}
+{Category:"Electric Pumps", Model:"QM200/3-W", Design:"TU4DH22", Description:"-", Phase:"-", Prime:"7.5/10.2", Voltage:"-", Price:"820,674.96"}
+{Category:"Electric Pumps", Model:"QH200/3-W", Design:"TU4DH22", Description:"-", Phase:"-", Prime:"10/13.8", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"PM200/3-W", Design:"TU5DH22", Description:"-", Phase:"-", Prime:"12.5/16.4", Voltage:"-", Price:"953,460.39"}
+{Category:"Electric Pumps", Model:"HM200/3-W", Design:"TU6DH22", Description:"-", Phase:"-", Prime:"12.5/16.7", Voltage:"-", Price:"1,004,313"}
+{Category:"Electric Pumps", Model:"M275/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"5.5/7.52", Voltage:"-", Price:"321,144.52"}
+{Category:"Electric Pumps", Model:"H275/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"7.5/10.2", Voltage:"-", Price:"414,180"}
+{Category:"Electric Pumps", Model:"I275/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"10/13.8", Voltage:"-", Price:"430,639"}
+{Category:"Electric Pumps", Model:"J275/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"12.5/16.7", Voltage:"-", Price:"477,900"}
+{Category:"Electric Pumps", Model:"L3003/-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"3/4.24", Voltage:"-", Price:"201,780"}
+{Category:"Electric Pumps", Model:"M300/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"7.5/10.2", Voltage:"-", Price:"396,480"}
+{Category:"Electric Pumps", Model:"MH300/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"10/13.8", Voltage:"-", Price:"447,260.78"}
+{Category:"Electric Pumps", Model:"H300/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"12.5/16.7", Voltage:"-", Price:"481,440"}
+{Category:"Electric Pumps", Model:"H315/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"15/20", Voltage:"-", Price:"717,553"}
+{Category:"Electric Pumps", Model:"13003/-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"20/30", Voltage:"-", Price:"808,505"}
+{Category:"Electric Pumps", Model:"1300/3-4X3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"20/30", Voltage:"-", Price:"827,241"}
+{Category:"Electric Pumps", Model:"J300/3-W", Design:"TUICH25", Description:"-", Phase:"-", Prime:"25/36", Voltage:"-", Price:"894,932"}
+{Category:"Electric Pumps", Model:"J300/3-4X3-W", Design:"TUICH25", Description:"-", Phase:"-", Prime:"25/36", Voltage:"-", Price:"892,080"}
+{Category:"Electric Pumps", Model:"L400/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"7.5/10.2", Voltage:"-", Price:"400,020"}
+{Category:"Electric Pumps", Model:"M400/3-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"12.5/16.7", Voltage:"-", Price:"499,140"}
+{Category:"Electric Pumps", Model:"1500/20-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"20/30", Voltage:"-", Price:"872,245"}
+{Category:"Electric Pumps", Model:"1500/25-W", Design:"TU1CH25", Description:"-", Phase:"-", Prime:"25/36", Voltage:"-", Price:"941,896"}
+{Category:"Electric Pumps", Model:"VMS100/4-3-W", Design:"TU4DV22", Description:"-", Phase:"-", Prime:"3/4.8", Voltage:"-", Price:"415,647.48"}
+{Category:"Electric Pumps", Model:"VMS100/4-5-W", Design:"TU4DV22", Description:"-", Phase:"-", Prime:"3/4.8", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"VMS100/5-3-W", Design:"TU5DV22", Description:"-", Phase:"-", Prime:"3/4.8", Voltage:"-", Price:"450,205.43"}
+{Category:"Electric Pumps", Model:"VMS100/5-5-W", Design:"TU5DV22", Description:"-", Phase:"-", Prime:"3/4.8", Voltage:"-", Price:"501,972"}
+{Category:"Electric Pumps", Model:"VMS1006-5/-W", Design:"TU6DV22", Description:"-", Phase:"-", Prime:"5.5/7.52", Voltage:"-", Price:"544,585.04"}
+{Category:"Electric Pumps", Model:"VMS100/7-5-W", Design:"TU7DV22", Description:"-", Phase:"-", Prime:"5.5/7.52", Voltage:"-", Price:"587,968"}
+{Category:"Electric Pumps", Model:"SVS200/3", Design:"TW1CV26", Description:"-", Phase:"-", Prime:"0.75/4.1", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"SVS250-3/3", Design:"TWICV26", Description:"-", Phase:"-", Prime:"3/4.2", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"SVS250-5/3", Design:"TWICV26", Description:"-", Phase:"-", Prime:"5/7.3", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"NCS300-3/3", Design:"TW1CV46", Description:"-", Phase:"-", Prime:"3/5.6", Voltage:"-", Price:"-"}
+{Category:"Electric Pumps", Model:"NCS300-4/3", Design:"TW1CV46", Description:"-", Phase:"-", Prime:"2026-04-07", Voltage:"-", Price:"-"}
+{Category:"EJ Pumps", Model:"SK-EJM200/1", Design:"SUICH25", Description:"-", Phase:"-", Prime:"2/8.5", Voltage:"-", Price:"81,573"}
+{Category:"Aerators", Model:"DB100/P", Design:"-", Description:"DEEP WELL KIT TYPE A 1 Inch", Phase:"-", Prime:"-", Voltage:"-", Price:"14,950"}
+{Category:"Aerators", Model:"DB150/P", Design:"-", Description:"DEEP WELL KIT TYPE C 1 1/2 Inch", Phase:"-", Prime:"-", Voltage:"-", Price:"78,245"}
+{Category:"Aerators", Model:"DB200/P", Design:"-", Description:"DEEP WELL KIT TYPE D 2 Inch", Phase:"-", Prime:"-", Voltage:"-", Price:"89,420"}
+{Category:"AVRS Pumps", Model:"AVRS007-08-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"363,363.3"}
+{Category:"AVRS Pumps", Model:"AVRS007-09-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"382,566.62"}
+{Category:"AVRS Pumps", Model:"AVRS007-10-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"399,084.26"}
+{Category:"AVRS Pumps", Model:"AVRS007-12-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"446,596.96"}
+{Category:"AVRS Pumps", Model:"AVRS007-18-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"580,580.06"}
+{Category:"AVRS Pumps", Model:"AVRS007-25-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"764,763.9"}
+{Category:"AVRS Pumps", Model:"AVRS009-12-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"494,667.8"}
+{Category:"AVRS Pumps", Model:"AVRS009-19-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"661,661.4"}
+{Category:"AVRS Pumps", Model:"AVRS012-06-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"342,341.6"}
+{Category:"AVRS Pumps", Model:"AVRS012-08-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"460,742.8"}
+{Category:"AVRS Pumps", Model:"AVRS012-10-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"484,484.4"}
+{Category:"AVRS Pumps", Model:"AVRS012-13-P", Design:"-", Description:"-", Phase:"Three", Prime:"-", Voltage:"380-415", Price:"599,599.3"}
+{Category:"Engine Pumps", Model:"M140/E", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY15DK (1.9 HP)", Voltage:"-", Price:"-"}
+{Category:"Engine Pumps", Model:"DM140/E", Design:"KA2CH32", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"199,560"}
+{Category:"Engine Pumps", Model:"L200/E", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY15DK (1.9 HP)", Voltage:"-", Price:"133,845"}
+{Category:"Engine Pumps", Model:"M200/E", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"162,730"}
+{Category:"Engine Pumps", Model:"200/JF", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY15DK (1.9 HP)", Voltage:"-", Price:"130,843"}
+{Category:"Engine Pumps", Model:"200/SF", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"158,780"}
+{Category:"Engine Pumps", Model:"200/SF/HH", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"169,920"}
+{Category:"Engine Pumps", Model:"SP200/JF", Design:"KA1CH02S", Description:"-", Phase:"-", Prime:"ROBIN EY15DK (1.9 HP)", Voltage:"-", Price:"138,461"}
+{Category:"Engine Pumps", Model:"SP200/SF", Design:"KA1CH02S", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"203,165"}
+{Category:"Engine Pumps", Model:"LN300/E", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"177,130"}
+{Category:"Engine Pumps", Model:"SP300/E", Design:"KA1CH32S", Description:"-", Phase:"-", Prime:"ROBIN EY20DK (2.6 HP)", Voltage:"-", Price:"206,244"}
+{Category:"Engine Pumps", Model:"DM140/GX200K", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"97,660"}
+{Category:"Engine Pumps", Model:"M200/GX200K", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"79,503"}
+{Category:"Engine Pumps", Model:"200-SF/GX200K", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"67,614"}
+{Category:"Engine Pumps", Model:"200-SF-HH/GX2000K", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"-"}
+{Category:"Engine Pumps", Model:"SP200/GX200K", Design:"KA1CH02S", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"67,614"}
+{Category:"Engine Pumps", Model:"LN300/GX200K", Design:"KA1CH32", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"75,122"}
+{Category:"Engine Pumps", Model:"SP300/GX200K", Design:"KA1CH02S", Description:"-", Phase:"-", Prime:"BASEPOWER GX200K (3.2 HP)", Voltage:"-", Price:"72,113"}
+{Category:"Engine Pumps", Model:"DM140/HL170", Design:"DA2CH32", Description:"-", Phase:"-", Prime:"HAILIN HL170FA (3.4 HP)", Voltage:"-", Price:"258,712"}
+{Category:"Engine Pumps", Model:"M200/HL170", Design:"DA1CH32", Description:"-", Phase:"-", Prime:"HAILIN HL170FA (3.4 HP)", Voltage:"-", Price:"203,348"}
+{Category:"Engine Pumps", Model:"SP200/HL170", Design:"DA1CH35S", Description:"-", Phase:"-", Prime:"HAILIN HL170FA (3.4 HP)", Voltage:"-", Price:"170,675"}
+{Category:"Engine Pumps", Model:"SP300/HL170", Design:"DA1CH35S", Description:"-", Phase:"-", Prime:"HAILIN HL170FA (3.4 HP)", Voltage:"-", Price:"179,747"}
+{Category:"Engine Pumps", Model:"LN300/HL170", Design:"DU1CH32", Description:"-", Phase:"-", Prime:"HAILIN HL170FA (3.4 HP)", Voltage:"-", Price:"208,785"}
+{Category:"Engine Pumps", Model:"H200/HL178", Design:"DU2CH02", Description:"-", Phase:"-", Prime:"HAILIN HL178FA (5.0 HP)", Voltage:"-", Price:"189,249"}
+{Category:"Bare Shaft", Model:"BDDM200", Design:"BU2BH32", Description:"-", Phase:"-", Prime:"Bare Shaft (6.0 HP / 3000 RPM)", Voltage:"-", Price:"129,969"}
+{Category:"Bare Shaft", Model:"T300/J", Design:"BA1BH07", Description:"-", Phase:"-", Prime:"Bare Shaft (5.0 HP / 2500 RPM)", Voltage:"-", Price:"100,595"}
+{Category:"Bare Shaft", Model:"T400", Design:"BA1BH07", Description:"-", Phase:"-", Prime:"Bare Shaft (10.0 HP / 2500 RPM)", Voltage:"-", Price:"110,655"}
+{Category:"Bare Shaft", Model:"BD200R", Design:"BA1BH32", Description:"-", Phase:"-", Prime:"Bare Shaft (3.0 HP / 3000 RPM)", Voltage:"-", Price:"72,428"}
+{Category:"Bare Shaft", Model:"BD200", Design:"BA1BH32", Description:"-", Phase:"-", Prime:"Bare Shaft (3.0 HP / 3000 RPM)", Voltage:"-", Price:"76,452"}
+{Category:"Evergush", Model:"EG-EF-10A", Design:"-", Description:"SEWAGE-VORTEX", Phase:"Single Phase", Prime:"0.75 (1)", Voltage:"-", Price:"148,420"}
+{Category:"Evergush", Model:"EG-EFK-10A", Design:"-", Description:"CUTTER", Phase:"Single Phase", Prime:"0.75 (1)", Voltage:"-", Price:"169,106"}
+{Category:"Evergush", Model:"EG-EF-20A", Design:"-", Description:"SEWAGE-VORTEX", Phase:"Single Phase", Prime:"1.5 (2)", Voltage:"-", Price:"223,952"}
+{Category:"Evergush", Model:"EG-EFK-10T", Design:"-", Description:"CUTTER", Phase:"Three Phase", Prime:"0.75 (1)", Voltage:"-", Price:"152,090"}
+{Category:"Evergush", Model:"EG-EF-20T", Design:"-", Description:"SEWAGE-VORTEX", Phase:"Three Phase", Prime:"1.5 (2)", Voltage:"-", Price:"195,207"}
+{Category:"Evergush", Model:"EG-EFK-20T", Design:"-", Description:"CUTTER", Phase:"Three Phase", Prime:"1.5 (2)", Voltage:"-", Price:"241,570"}
+{Category:"Evergush", Model:"EG-EFK-30T", Design:"-", Description:"CUTTER", Phase:"Three Phase", Prime:"2.2 (3)", Voltage:"-", Price:"307,366"}
+{Category:"Evergush", Model:"EG-EFK-50T-(3)", Design:"-", Description:"CUTTER", Phase:"Three Phase", Prime:"3.7 (5)", Voltage:"-", Price:"413,496"}
+{Category:"Evergush", Model:"EG-EFK-50T", Design:"-", Description:"CUTTER", Phase:"Three Phase", Prime:"3.7 (5)", Voltage:"-", Price:"427,018"}
+{Category:"Evergush", Model:"EG-ET400", Design:"-", Description:"PRESSURE PUMP", Phase:"Single Phase", Prime:"0.37 (0.5)", Voltage:"-", Price:"98,200"}
+{Category:"Evergush", Model:"EG-ET800", Design:"-", Description:"PRESSURE PUMP", Phase:"Single Phase", Prime:"0.75 (1)", Voltage:"-", Price:"145,895"}
+{Category:"Agriculture", Model:"ROTO TILLER RC-MT8", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"314,635"}
+{Category:"Agriculture", Model:"ROTO TILLER RC-MT8D", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"251,552"}
+{Category:"Agriculture", Model:"ROTO TILLER RC-MT660", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"396,928"}
+{Category:"Agriculture", Model:"ROTO TILLER MT FD1350EL-S", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"403,289"}
+{Category:"Agriculture", Model:"THRESHER TH1-T", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"247,800"}
+{Category:"Agriculture", Model:"THRESHER TH2-T", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"236,000"}
+{Category:"Agriculture", Model:"THRESHER TH1-20", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"278,126"}
+{Category:"Agriculture", Model:"THRESHER TH7-20", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"529,938"}
+{Category:"Agriculture", Model:"MULTI CHOPPER MMC/100SS", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"531,000"}
+{Category:"Agriculture", Model:"MULTI CHOPPER MMC100MS", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"767,000"}
+{Category:"Agriculture", Model:"Roto Slasher JSH 3ES", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"708,000"}
+{Category:"Agriculture", Model:"Roto Slasher JSH15E", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"236,000"}
+{Category:"Agriculture", Model:"Roto Slasher JSH16D", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"767,000"}
+{Category:"Agriculture", Model:"Roto Slasher JSH 35T", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"796,500"}
+{Category:"Agriculture", Model:"FODDER GRASSCUTTER MG150-3", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"737,500"}
+{Category:"Agriculture", Model:"FODDER GRASSCUTTER JMC6", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"312,700"}
+{Category:"Agriculture", Model:"FODDER GRASSCUTTER JMC 10D", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"342,200"}
+{Category:"Agriculture", Model:"FODDER GRASSCUTTER JMC 10E", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"299,000"}
+{Category:"Agriculture", Model:"FODDER GRASSCUTTER JMC15E", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"251,340"}
+{Category:"Agriculture", Model:"FODDER GRASSCUTTER JMC 16D", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"383,500"}
+{Category:"Agriculture", Model:"CHAFF CUTTER CHC 93ZT", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"21,606"}
+{Category:"Agriculture", Model:"BUSH CUTTER RC-MT8", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"299,000"}
+{Category:"Agriculture", Model:"BUSH CUTTER BC/GT8", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"251,340"}
+{Category:"Agriculture", Model:"Foot Board Rider (32BC 9450)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"15,281"}
+{Category:"Agriculture", Model:"GT8 Riding Sheet Assembly (32BC 9000)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"151,158"}
+{Category:"Agriculture", Model:"RSV2.0GI Sieve Machine (Rotary)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"424,800"}
+{Category:"Agriculture", Model:"RSV-2.0SS Sieve Machine (Rotary)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"125,080"}
+{Category:"Agriculture", Model:"STAINLESS STEEL MULTI GRINDER MG100-1", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"322,966"}
+{Category:"Agriculture", Model:"Stand For SSMG (32MG 75300)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"495,600"}
+{Category:"Agriculture", Model:"PEPPER THRESHER PTM-1.5SS", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"123,876"}
+{Category:"Agriculture", Model:"MINI MAIZE THRESHER MTH1-T", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"299,000"}
+{Category:"Agriculture", Model:"TEA CUTTER TCM-5HP", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"344,000"}
+{Category:"Agriculture", Model:"TEA CUTTER TCM-5HP-OP2", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"370,000"}
+{Category:"Agriculture", Model:"TEA CUTTER TCM-15HP (Saw Chips Grinding)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"531,000"}
+{Category:"Agriculture", Model:"RSC-1.5E (Engine Type)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"531,000"}
+{Category:"Agriculture", Model:"RSC-1.5M (Electric Motor)", Design:"-", Description:"-", Phase:"-", Prime:"-", Voltage:"-", Price:"1,085,600"},
+//];
 
 // ===== SEARCH FUNCTION =====
 function searchProducts(){
