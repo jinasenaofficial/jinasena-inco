@@ -1,120 +1,166 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>JINASENA (PVT) LIMITED</title>
 
 <style>
 
-@font-face {
-    font-family: 'Corbert';
-    src: url('Corbert-Regular.ttf');
+@font-face{
+font-family:'Corbert';
+src:url('Corbert-Regular.ttf');
 }
 
-body {
-    margin: 0;
-    font-family: 'Corbert', sans-serif;
-    background-color: #002f87;
-    color: white;
-    text-align: center;
+body{
+margin:0;
+font-family:'Corbert',sans-serif;
+background:#002f87;
+color:white;
+text-align:center;
 }
 
-/* Top Section */
-.header {
-    padding: 20px;
+/* HEADER */
+
+.header{
+padding:20px;
 }
 
-.header img {
-    width: 180px;
+.header img{
+width:170px;
 }
 
-.company-name {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 10px;
+.company-name{
+font-size:26px;
+font-weight:bold;
+margin-top:10px;
 }
 
-.date-text {
-    font-size: 18px;
-    margin-top: 5px;
+/* MIDDLE SECTION */
+
+.middle-section{
+margin-top:30px;
 }
 
-/* Middle Section */
-.middle-section {
-    margin-top: 30px;
+.middle-section img{
+width:250px;
+max-width:90%;
 }
 
-.middle-section img {
-    width: 260px;
+.event-info{
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+padding:0 10px;
 }
 
-.location-text {
-    margin-top: 15px;
-    font-size: 18px;
+/* NAV BUTTONS */
+
+.nav-buttons{
+margin-top:30px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:0 10px;
 }
 
-/* Navigation Tabs */
-.nav-buttons {
-    margin-top: 30px;
+.nav-buttons a{
+flex:1 1 160px;
+background:#a18528;
+color:white;
+padding:12px;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
 }
 
-.nav-buttons a {
-    display: inline-block;
-    background-color: #a18528;
-    color: white;
-    padding: 12px 20px;
-    margin: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+/* SPECIAL OFFER */
+
+.special-offer{
+width:100%;
+font-size:30px;
+font-weight:bold;
+color:#ffd200;
+margin-top:15px;
+animation:blink 1s infinite;
 }
 
-/* Footer */
-.footer {
-    background-color: #001f5c;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: 15px;
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
+}
+
+/* FOOTER */
+
+.footer{
+background:#001f5c;
+padding:15px;
+margin-top:40px;
+font-size:14px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
-    <img src="company-logo.png" alt="Company Logo">
-    <div class="company-name">JINASENA (PVT) LIMITED</div>
-    <div class="date-text">13th, 14th & 15th MARCH</div>
+
+<img src="company-logo.png" alt="Company Logo">
+
+<div class="company-name">
+JINASENA (PVT) LIMITED
+</div>
+
 </div>
 
 <div class="middle-section">
-    <img src="inco-logo.png" alt="INCO Logo">
-    <div class="location-text">
-        At BMICH, Stall No A-01 & A-02<br>
-        Visit Our Website
-    </div>
+
+<img src="inco-logo.png" alt="INCO Logo">
+
+<div class="event-info">
+13th, 14th & 15th MARCH | At BMICH Stall No <b>A-01 & A-02</b>
+</div>
+
 </div>
 
 <div class="nav-buttons">
-    <a href="https://www.jinasena.com/water_pumps.php?prod=pump" target="_blank">Water Pumps</a>
-    <a href="https://www.jinasena.com/agriccultural.php?prod=agri" target="_blank">Agricultural Machinery</a>
-    <a href="https://www.jinasena.com/water_purifiers.php?prod=w_puri" target="_blank">Water Purification</a>
-    <a href="price-list.html" target="_blank">Products Prices</a>
-    <a href="https://forms.gle/GVVbVGAkXjAmJeaF6" target="_blank">Click to Register</a>
+
+<a href="https://www.jinasena.com/water_pumps.php?prod=pump" target="_blank">
+Water Pumps
+</a>
+
+<a href="https://www.jinasena.com/agriccultural.php?prod=agri" target="_blank">
+Agricultural Machinery
+</a>
+
+<a href="https://www.jinasena.com/water_purifiers.php?prod=w_puri" target="_blank">
+Water Purification
+</a>
+
+<a href="price-list.html" target="_blank">
+Products Prices
+</a>
+
+<div class="special-offer">
+THE SPECIAL OFFER!
+</div>
+
+<a href="https://forms.gle/GVVbVGAkXjAmJeaF6" target="_blank">
+Click to Register
+</a>
+
 </div>
 
 <div class="footer">
-    No 186, Elvitigala Mawatha, Colombo 08
+No 186, Elvitigala Mawatha, Colombo 08
 </div>
 
 </body>
-
 </html>
-
-
-
-
-
-
